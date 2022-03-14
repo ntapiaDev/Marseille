@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    margin: 10px;
+}
+
+section > p {
+    font-weight: bold;
+    margin: 15px;
+}
+
+header, section, footer {
+    margin: 25px 0;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+header img {
+    width: 50px;
+}
+
+header {
+    text-align: center;    
+}
+
+header ul {
+    display: flex;
+}
+
+header li {
+    width: 50%;
+    padding: 10px;
+}
+
+header li.active {
+    border-bottom: 1px solid #0065FC;
+}
+
+header li.active a {
+    color: #0065FC;
+}
+
+header li {
+    border-bottom: 1px solid rgb(241, 241, 241);
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    margin: 20px;
+}
+
+form {
+    display: flex;
+    border: 1px solid rgb(241, 241, 241);
+    border-radius: 10px;
+    height: 40px;
+    margin: 5px;
+}
+
+input {
+    flex-grow: 2;
+    border: none;
+    padding: 5px;
+}
+
+.btn-text {
+    display: none;
+    width: 100px;
+}
+
+.location {
+    background-color: rgb(241, 241, 241);
+    border-radius: 10px 0 0 10px;
+    width: 40px;
+    display: flex;
+    height: 40px;
+}
+
+.fa-location-dot {
+    margin: auto;
+}
+
+button {
+    background-color: #0065FC;
+    color: #FFF;
+    border: none;
+    border-radius: 10px;
+    width: 40px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filters li {
+    border: 2px solid rgb(217, 217, 217);
+    border-radius: 15px;
+    padding: 0 10px 0 0;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.filters li:hover {
+    background-color: #0065FC;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.filters i {
+    background-color: #DEEBFF;
+    color: #0065FC;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin-right: 5px;
+    padding: 6px 6px;
+}
+
+.fa-info {
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 10px;
+    color: #0065FC;
+    width: 20px;
+    height: 20px;
+    padding-left: 6px;
+}
+
+#popular {
+    background-color: #F2F2F2;
+    border-radius: 25px;
+    position: relative;
+    padding: 10px;
+}
+
+h2 {
+    margin-top: 15px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.fa-arrow-trend-up {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+}
+
+#popular a, #lodging a, #activities a {
+    background-color: #FFF;
+    border-radius: 25px;
+    margin: 15px;
+    padding: 5px;
+    display: flex;
+    transition: transform 0.3s;
+    box-shadow: 10px 15px 30px rgba(0,0,0,0.12) ;
+}
+
+#popular a:hover, #lodging a:hover, #activities a:hover {
+    transform: scale(1.075);
+    cursor: pointer;
+}
+
+#popular a div {
+    display: block;
+    margin-top: 0;
+}
+
+#popular a div h2 {
+    margin-left: 10px;
+}
+
+#popular a img {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px 0 0 15px;
+}
+
+#popular a div i:first-of-type {
+    margin-left: 10px;
+}
+
+.fa-star {
+    color: #0065FC;
+}
+
+.fa-star.empty-star {
+    color: rgb(217, 217, 217);
+}
+
+#lodging a, #activities a {
+    flex-direction: column;
+}
+
+#lodging h2, #lodging div {
+    margin-left: 10px;
+}
+
+#lodging a img, #activities a img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+#lodging > p:hover {
+    cursor: pointer;
+}
+
+#activities p {
+    font-weight: bold;
+}
+
+.img-large {
+    display: none;
+}
+
+footer {
+    padding: 20px;
+}
+
+footer h3 {
+    margin: 15px 5px;
+}
+
+footer li {
+    padding: 5px;
+}
+
+footer a:hover {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+
+    header img {
+        margin-left: 25px;
+    }
+
+    header nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 400px;
+        text-align: center;
+    }
+
+    header li {
+        border-bottom: none;
+        border-top: 1px solid rgb(241, 241, 241);
+    }
+
+    header li.active {
+        border-bottom: none;
+        border-top: 1px solid #0065FC;
+    }
+
+    header {
+        text-align: left;
+    }
+
+    form {
+        width: 400px;
+        margin-left: 10px;
+    }
+
+    .btn-icon {
+        display: none;
+    }
+
+    .btn-text {
+        display: block;
+        border-radius: 0 10px 10px 0;
+    }
+
+    #container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #popular-content, #lodging-content, #activities-container {        
+        display: flex;
+        flex-wrap: wrap;
+        padding: 25px;
+    }
+
+    #popular-content a, #lodging-content a, #activities-container a {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    #lodging {
+        order: -1;
+        width: 70%;
+        background-color: #F2F2F2;
+        border-radius: 25px;
+        margin: 25px;
+    }
+
+    #popular {
+        width: 25%;
+    }
+
+    #popular-content a {
+        width: 100%;
+    }
+
+    #lodging a {
+        width: 30%;
+        margin: 15px auto;
+
+    }
+
+    #lodging > p {
+        margin: 30px;
+    }
+
+    #activities-container {
+        display: flex;
+        flex-direction: column;
+        height: 700px;
+    }
+
+    #activities-container a {
+        width: 60%;
+        height: 600px;
+    }
+
+    #activities-container a img {
+        height: 100%;
+    }
+
+    #activities-container a:nth-child(2), #activities-container a:nth-child(3), #activities-container a:nth-child(5), #activities-container a:nth-child(6) {
+        height: 44%;
+        width: 54%;
+    }
+
+    /* #activities-container {
+        display: grid;
+    }
+
+    #activities-container a:nth-child(1) {
+        grid-area: 1 / 1 / 3 / 2
+    }
+
+    #activities-container a:nth-child(2) {
+        grid-area: 1 / 2 / 2 / 3
+    }
+
+    #activities-container a:nth-child(3) {
+        grid-area: 2 / 2 / 3 / 3
+    }
+
+    #activities-container a:nth-child(4) {
+        grid-area: 1 / 3 / 3 / 4
+    }
+
+    #activities-container a:nth-child(5) {
+        grid-area: 1 / 4 / 2 / 5
+    }
+
+    #activities-container a:nth-child(6) {
+        grid-area: 2 / 4 / 3 / 5
+    }
+
+    #activities-container a {
+        width: 90%;
+    } */
+
+    .img-small {
+        display: none;
+    }
+
+    .img-large {
+        display: block;
+    }
+    
+    footer {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
